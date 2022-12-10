@@ -1,0 +1,25 @@
+package DynamicMusic;
+
+import javax.swing.*;
+import java.awt.*;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+// 스레들는 프로그램 안에 있는 작은 프로그램
+public class Game extends Thread {
+    // 1. 전반적인 처리 과정
+    // Main 메소드를 통해 게임이 실행되면 지금 이 클래스 - game - 에서
+    // 만들어진 인스턴스 변수를 이용해서 게임 컨트롤 가능하도록
+    // 즉 게임 클래스의 인스턴스가 생성되어 실행되면 아래 run() 메소드가 실행됨
+
+    // ingame 노트 경로별 경계선(라인)
+    private Image noteRouteLine = new ImageIcon(getClass().getResource("/menu_images/noteRouteLine.png")).getImage();
+
+    // ingame 음악 노트 판정 배경
+    private Image judgementLineImage = new ImageIcon(getClass().getResource("/menu_images/judgementLine.png")).getImage();
+
+    // Ingame 게임 정보 표시를 위한 이미지
+    private Image gameInfoImage = new ImageIcon(getClass().getResource("/menu_images/gameInfo.png")).getImage();
+
+   
